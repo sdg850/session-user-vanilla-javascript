@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+    <title>Session</title>
+</head>
+
+<body>
+
+
+    <form id='form' class="form" action="/" method="GET">
+
+        <h1 class="title">Sign up</h1>
+
+
+        <div class="container">
+
+            <label for="name">Name</label>
+            <input type="text" id='name' class="input-text" name='name' placeholder="Name">
+
+            <label for="password">password</label>
+            <input type="password" id='password' name="password" class="input-text" name='password'
+                placeholder="password">
+
+            <label for="verifiedPassword">password</label>
+            <input type="verifiedPassword" id='verifiedPassword' name="verifiedPassword" class="input-text"
+                placeholder="verifiedPassword">
+        </div>
+
+        <div class="btn">
+            <button type="submit" class="btn" id='btn'>Submit</button>
+        </div>
+
+        <div class="error" id='error'></div>
+
+
+
+    </form>
+</body>
+
+</html>

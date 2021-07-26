@@ -1,0 +1,17 @@
+{
+  "name": "sesion-user",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "index.html",
+    "test": "jest  --detectOpenHandles  --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "puppeteer": "^10.1.0"
+  }
+}
