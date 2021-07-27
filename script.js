@@ -29,9 +29,14 @@ function init() {
             messages.push(inputPassword.Message())
         }
 
-        messages.push(matchValues.matchValue(verifiedPassword.value, password.value))
+        if (matchValues.matchValue(verifiedPassword.value, password.value) != 'matched') {
+            messages.push(matchValues.matchValue(verifiedPassword.value, password.value))
+        }
 
-        showMessages(e, messages, errorElement)
+        if (messages.length > 0) {
+            showMessages(e, messages, errorElement)
+        }
+
 
     })
 }
