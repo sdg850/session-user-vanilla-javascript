@@ -1,10 +1,22 @@
 const puppeteer = require('puppeteer');
-const jest = require('jest')
-const  { validateValue, showMessages } = require(util)
+import functions from './util.js'
 
 
-test('should be a massage', () => {
-    let messages = ['Nombre es requiered', 'Password is requiered'] 
+test('should be a validate input', () => {
+
+    const text = ""
+
+    const inputName = functions.validateValue('Name')
+    expect(inputName.isEmpty(text)).toBeTruthy()
+
+})
+
+test('should be a validate input', () => {
+
+    const text = ""
+
+    const inputPassword = functions.validateValue('Password')  
+    expect(inputPassword.isEmpty(text)).toBeTruthy()
 
 })
 
@@ -18,7 +30,7 @@ test('should click around', async () => {
 
     const page = await browser.newPage()
     await page.goto(
-        'http://127.0.0.1:5500/index.html'
+        'file:///D:/saul.gomez/Documents/SaulGomez/Front_end/javascript-projects/sesion-user/index.html'
     );
 
     // await page.click('input#name');

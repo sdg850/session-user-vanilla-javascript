@@ -1,5 +1,5 @@
-import { validateValue, showMessages } from './util.js'
-
+//const  functions   = require('./util')
+import functions from './util.js'
 
 const nam = document.getElementById('name')
 const password = document.getElementById('password')
@@ -11,16 +11,22 @@ const form = document.getElementById('form')
 
 
 function init() {
+
     form.addEventListener('submit', (e) => {
         let messages = []
         console.log(nam.value, password.value, verifiedPassword.value)
 
-        const inputName = validateValue('Name')
-        const inputPassword = validateValue('Password')
-        const matchValues = validateValue('Passwords')
+
+
+        const inputName = functions.validateValue('Name')
+        const inputPassword = functions.validateValue('Password')
+        const matchValues = functions.validateValue('Passwords')
+
 
 
         if (inputName.isEmpty(nam.value) == true) {
+
+
             messages.push(inputName.Message())
 
         }
@@ -31,7 +37,8 @@ function init() {
 
         messages.push(matchValues.matchValue(verifiedPassword.value, password.value))
 
-        showMessages(e, messages, errorElement)
+        functions.showMessages(e, messages, errorElement)
+
     })
 }
 
