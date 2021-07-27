@@ -1,5 +1,4 @@
- const functions = {
-    validateValue: (inputName) => {
+   const  validateValue = (inputName) => {
 
         return {
             Message: function () {
@@ -20,8 +19,9 @@
             }
         }
 
-    },
-        showMessages: (e, messages, Element) => {
+    }
+     
+    const showMessages = (e, messages, Element) => {
             if (messages.length > 0) {
                 Element.innerText = messages.join('\n')
                 e.preventDefault()
@@ -30,9 +30,9 @@
 
 
 
-}
 
-export default functions;
+
+export { showMessages, validateValue };
 
 
 

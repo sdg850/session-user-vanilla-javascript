@@ -1,12 +1,12 @@
 const puppeteer = require('puppeteer');
-import functions from './util.js'
+import { validateValue } from './util.js'
 
 
 test('should be a validate input', () => {
 
     const text = ""
 
-    const inputName = functions.validateValue('Name')
+    const inputName = validateValue('Name')
     expect(inputName.isEmpty(text)).toBeTruthy()
 
 })
@@ -15,7 +15,7 @@ test('should be a validate input', () => {
 
     const text = ""
 
-    const inputPassword = functions.validateValue('Password')  
+    const inputPassword = validateValue('Password')
     expect(inputPassword.isEmpty(text)).toBeTruthy()
 
 })
